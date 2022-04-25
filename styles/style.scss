@@ -737,15 +737,52 @@ body {
     }
   }
   section.hot-news {
-    padding: 0 20px;
+    padding: 48px 20px;
+    h2 {
+      font-size: 20px;
+      position: relative;
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #222;
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        width: 70%;
+        background-color: #222;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
     div.headline {
       display: flex;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
       h3 {
         font-size: 15px;
         line-height: 30px;
-        font-weight: 400;
-        flex: 1;
+        font-weight: 200;
+        color: #222;
+        flex: 5;
       }
+      span {
+        flex: 1;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+        color: hsla(0, 0%, 72.2%, 0.5);
+        font-style: italic;
+      }
+      &#non-padding {
+        padding: 0;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  section.tag {
+    padding: 0 20px;
+    div.container {
     }
   }
 }
